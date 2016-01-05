@@ -17,8 +17,9 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
-        Instantiate(m_playerPrefab, m_roadpieceSpawn.transform.position, m_roadpieceSpawn.transform.rotation);
+        Vector3 playerSpawnPosition = m_roadpieceSpawn.transform.position;
+        playerSpawnPosition += new Vector3(0, 10, 0);
+        Instantiate(m_playerPrefab, playerSpawnPosition , m_roadpieceSpawn.transform.rotation);
 
         for (int i = 0; i < m_trackLengthInpieces; i++)
         {
