@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
 
-	public float maxSpeed;
+	public float speed;
 	public float tilt;
 
 	private Rigidbody rb;
@@ -20,7 +20,7 @@ public class PlayerScript : MonoBehaviour {
 
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 
-		rb.AddForce (movement * maxSpeed);
+		rb.AddForce (movement * speed);
 
 		rb.rotation = Quaternion.Euler (0.0f, 0.0f, rb.velocity.x * -tilt);
 	}
