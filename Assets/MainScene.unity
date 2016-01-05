@@ -156,8 +156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_roadpieceSpawn: {fileID: 1773210685}
   m_roadPieceTemplate: {fileID: 120004, guid: 1ebe781e8c110834dbd0890f1b8a85c9, type: 2}
+  m_roadPieceTemplateRight: {fileID: 120004, guid: 3b538c077c1464a45a608a5fc0887ec1,
+    type: 2}
   m_playerPrefab: {fileID: 196242, guid: 4925a0b20a91b8b4ba9e88f721ae7428, type: 2}
-  m_trackLengthInpieces: 10
+  m_trackLengthInpieces: 100
 --- !u!4 &873175678
 Transform:
   m_ObjectHideFlags: 0
@@ -237,7 +239,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -259,7 +261,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!4 &1066932378
 Transform:
   m_ObjectHideFlags: 0
