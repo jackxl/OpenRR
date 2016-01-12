@@ -165,7 +165,7 @@ MonoBehaviour:
   g: {fileID: 120004, guid: e707a570bb6bbc945a634a51d27b64cb, type: 2}
   m_roadPieces: []
   m_playerPrefab: {fileID: 196242, guid: 4925a0b20a91b8b4ba9e88f721ae7428, type: 2}
-  m_trackLengthInpieces: 100
+  m_trackLengthInpieces: 10
 --- !u!4 &873175678
 Transform:
   m_ObjectHideFlags: 0
