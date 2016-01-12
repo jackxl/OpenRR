@@ -33,7 +33,7 @@ public class PlayerScript : MonoBehaviour {
             Jump();
         }
 
-		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, 1);
 
 		rb.AddForce (movement * speed);
 

@@ -25,16 +25,15 @@ public class GameManager : MonoBehaviour
 
     private void initArray()
     {
-        m_roadPieces = new GameObject[5];
+        m_roadPieces = new GameObject[6];
 
         m_roadPieces[0] = a;
         m_roadPieces[1] = b;
         m_roadPieces[2] = c;
         m_roadPieces[3] = d;
         m_roadPieces[4] = e;
-        //m_roadPieces[5] = e;
-        //m_roadPieces[6] = f;
-        //m_roadPieces[7] = g;
+        m_roadPieces[5] = f;
+        //m_roadPieces[6] = g;
 
 
     }
