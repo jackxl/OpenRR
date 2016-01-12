@@ -6,8 +6,15 @@ public class GameManager : MonoBehaviour
 {
 
     public GameObject m_roadpieceSpawn;
-    public GameObject m_roadPieceTemplate;
-    public GameObject m_roadPieceTemplateRight;
+    public GameObject a;
+    public GameObject b;
+    public GameObject c;
+    public GameObject d;
+    public GameObject e;
+    public GameObject f;
+    public GameObject g;
+
+    public GameObject[] m_roadPieces;
 
     public GameObject m_playerPrefab;
 
@@ -16,9 +23,27 @@ public class GameManager : MonoBehaviour
     private Vector3 m_nextRoadPiecePoint;
     private Quaternion m_nextRoadPieceRotation;
 
+    private void initArray()
+    {
+        m_roadPieces = new GameObject[5];
+
+        m_roadPieces[0] = a;
+        m_roadPieces[1] = b;
+        m_roadPieces[2] = c;
+        m_roadPieces[3] = d;
+        m_roadPieces[4] = e;
+        //m_roadPieces[5] = e;
+        //m_roadPieces[6] = f;
+        //m_roadPieces[7] = g;
+
+
+    }
+
     // Use this for initialization
     void Start()
     {
+        initArray();
+
         Vector3 playerSpawnPosition = m_roadpieceSpawn.transform.position;
         playerSpawnPosition += new Vector3(0, 5, 0);
         Instantiate(m_playerPrefab, playerSpawnPosition , m_roadpieceSpawn.transform.rotation);
@@ -32,14 +57,10 @@ public class GameManager : MonoBehaviour
 
             GameObject roadpieceToAdd;
 
-            if ((i%2) == 0)
-            {
-                roadpieceToAdd = m_roadPieceTemplate;
-            }
-            else
-            {
-                roadpieceToAdd = m_roadPieceTemplateRight;
-            }
+            //var numberGenerator = new System.Random(System.DateTime.Now.Minute + i * 3);
+            //roadpieceToAdd = m_roadPieces[numberGenerator.Next(0, m_roadPieces.Length)];
+
+            roadpieceToAdd = m_roadPieces[UnityEngine.Random.Range(0,m_roadPieces.Length)];
 
             Instantiate(roadpieceToAdd, new Vector3(m_nextRoadPiecePoint.x, m_nextRoadPiecePoint.y, m_nextRoadPiecePoint.z), m_nextRoadPieceRotation);
 
