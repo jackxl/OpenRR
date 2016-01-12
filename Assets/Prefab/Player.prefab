@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8955637d8705c443481c6483351e757b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 30
   tilt: 3
   jumpSpeed: 0
   jumpForce: 20
@@ -1206,7 +1206,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Mass

@@ -13,6 +13,8 @@ public class PlayerScript : MonoBehaviour {
 
     private Vector3 bodyVelocity;
 
+    private int updateCounter = 0;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
@@ -20,7 +22,12 @@ public class PlayerScript : MonoBehaviour {
 	
     void Update()
     {
+        updateCounter++;
 
+        if(rb.velocity.z < 0.5f && updateCounter > 60)
+        {
+            deleteBody();
+        }
     }
 
 	// Update is called once per frame
