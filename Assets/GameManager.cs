@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     private void initArray()
     {
-        m_roadPieces = new GameObject[6];
+        m_roadPieces = new GameObject[7];
 
         m_roadPieces[0] = a;
         m_roadPieces[1] = b;
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         m_roadPieces[3] = d;
         m_roadPieces[4] = e;
         m_roadPieces[5] = f;
-        //m_roadPieces[6] = g;
+        m_roadPieces[6] = g;
 
 
     }
@@ -49,17 +49,16 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < m_trackLengthInpieces; i++)
         {
-            if(i == 0)
-            {
-                SaveExitPointTransform(m_roadpieceSpawn);
-            }
 
             GameObject roadpieceToAdd;
 
-            //var numberGenerator = new System.Random(System.DateTime.Now.Minute + i * 3);
-            //roadpieceToAdd = m_roadPieces[numberGenerator.Next(0, m_roadPieces.Length)];
-
             roadpieceToAdd = m_roadPieces[UnityEngine.Random.Range(0,m_roadPieces.Length)];
+
+            if (i == 0)
+            {
+                SaveExitPointTransform(m_roadpieceSpawn);
+                roadpieceToAdd = m_roadPieces[0];
+            }
 
             Instantiate(roadpieceToAdd, new Vector3(m_nextRoadPiecePoint.x, m_nextRoadPiecePoint.y, m_nextRoadPiecePoint.z), m_nextRoadPieceRotation);
 

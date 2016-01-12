@@ -156,13 +156,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_roadpieceSpawn: {fileID: 1773210685}
-  a: {fileID: 120004, guid: bb59a05021de117458427f1c5bee268b, type: 2}
-  b: {fileID: 120004, guid: c784e17edc197134495677c2d8c31aa1, type: 2}
+  a: {fileID: 120004, guid: 35cca8c393661ea47b05a5ba10987aea, type: 2}
+  b: {fileID: 120004, guid: bb59a05021de117458427f1c5bee268b, type: 2}
   c: {fileID: 120004, guid: 5172fd2db8deb634ebfb9bfa8f1bac9d, type: 2}
   d: {fileID: 120004, guid: 85a1943fe7e409f41857cb03f1e35959, type: 2}
-  e: {fileID: 120004, guid: e707a570bb6bbc945a634a51d27b64cb, type: 2}
+  e: {fileID: 120004, guid: c784e17edc197134495677c2d8c31aa1, type: 2}
   f: {fileID: 120004, guid: 6f47006b79a4097488945833ac24ef69, type: 2}
-  g: {fileID: 0}
+  g: {fileID: 120004, guid: e707a570bb6bbc945a634a51d27b64cb, type: 2}
   m_roadPieces: []
   m_playerPrefab: {fileID: 196242, guid: 4925a0b20a91b8b4ba9e88f721ae7428, type: 2}
   m_trackLengthInpieces: 100
