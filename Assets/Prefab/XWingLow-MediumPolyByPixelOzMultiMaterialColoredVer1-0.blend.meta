@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: 7cf6e4436dff4464caab3f8fb0e587e0
+timeCreated: 1452603852
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BottomWing_001
+    100002: Canopy1
+    100004: CanopyInterior_000
+    100006: Greeble_001
+    100008: MirrorPlane_001
+    100010: Nose_000
+    100012: R2D2_001
+    100014: RearFuselageGreebles_000
+    100016: Seat_000
+    100018: TopGreebles_000
+    100020: TopWing_000
+    100022: Wings_000
+    100024: //RootNode
+    100026: ZGlass_000
+    400000: BottomWing_001
+    400002: Canopy1
+    400004: CanopyInterior_000
+    400006: Greeble_001
+    400008: MirrorPlane_001
+    400010: Nose_000
+    400012: R2D2_001
+    400014: RearFuselageGreebles_000
+    400016: Seat_000
+    400018: TopGreebles_000
+    400020: TopWing_000
+    400022: Wings_000
+    400024: //RootNode
+    400026: ZGlass_000
+    2300000: BottomWing_001
+    2300002: Canopy1
+    2300004: CanopyInterior_000
+    2300006: Greeble_001
+    2300008: MirrorPlane_001
+    2300010: Nose_000
+    2300012: R2D2_001
+    2300014: RearFuselageGreebles_000
+    2300016: Seat_000
+    2300018: TopGreebles_000
+    2300020: TopWing_000
+    2300022: Wings_000
+    2300024: //RootNode
+    2300026: ZGlass_000
+    3300000: BottomWing_001
+    3300002: Canopy1
+    3300004: CanopyInterior_000
+    3300006: Greeble_001
+    3300008: MirrorPlane_001
+    3300010: Nose_000
+    3300012: R2D2_001
+    3300014: RearFuselageGreebles_000
+    3300016: Seat_000
+    3300018: TopGreebles_000
+    3300020: TopWing_000
+    3300022: Wings_000
+    3300024: //RootNode
+    3300026: ZGlass_000
+    4300000: Fuselage_000
+    4300002: R2D2_001
+    4300004: TopGreebles_000
+    4300006: MirrorPlane_001
+    4300008: BottomWing_001
+    4300010: TopWing_000
+    4300012: Wings_000
+    4300014: Nose_000
+    4300016: Greeble_001
+    4300018: CanopyInterior_000
+    4300020: RearFuselageGreebles_000
+    4300022: Seat_000
+    4300024: Canopy1
+    4300026: ZGlass_000
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
