@@ -136,6 +136,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 873175678}
   - 114: {fileID: 873175677}
+  - 82: {fileID: 873175679}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -177,31 +178,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
---- !u!1 &1066932376
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1066932378}
-  - 82: {fileID: 1066932377}
-  m_Layer: 0
-  m_Name: Background_Music
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &1066932377
+--- !u!82 &873175679
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1066932376}
+  m_GameObject: {fileID: 873175676}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24323220, guid: b7d58ae0ae2dd6949b492a1727b3da54,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 186b6d05cd8c44397b77c5ab6c288c1a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -267,18 +253,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!4 &1066932378
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1066932376}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
 --- !u!1 &1773210685 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 120004, guid: 1ebe781e8c110834dbd0890f1b8a85c9, type: 2}
