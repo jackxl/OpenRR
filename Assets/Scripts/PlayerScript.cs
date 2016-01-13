@@ -49,6 +49,10 @@ public class PlayerScript : MonoBehaviour {
 
 		rb.AddForce (movement * speed);
 
+        // accellerometer input
+
+        rb.AddForce(new Vector3(Input.acceleration.x, 0.0f));
+
 		rb.rotation = Quaternion.Euler (0.0f, 0.0f, 0.0f);
 
         if(rb.position.y < -1)
