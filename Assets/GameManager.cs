@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject e;
     public GameObject f;
     public GameObject g;
+    public GameObject finish;
 
     public GameObject[] m_roadPieces;
 
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
 
     private Vector3 m_nextRoadPiecePoint;
     private Quaternion m_nextRoadPieceRotation;
+
+    int lastIndex;
 
     private void initArray()
     {
@@ -52,12 +55,24 @@ public class GameManager : MonoBehaviour
 
             GameObject roadpieceToAdd;
 
-            roadpieceToAdd = m_roadPieces[UnityEngine.Random.Range(0,m_roadPieces.Length)];
+            int index;
+            do
+            {
+                index = UnityEngine.Random.Range(0, m_roadPieces.Length);
+            } while (lastIndex == index);
+
+            roadpieceToAdd = m_roadPieces[index];
+
+            lastIndex = index;
 
             if (i == 0)
             {
                 SaveExitPointTransform(m_roadpieceSpawn);
                 roadpieceToAdd = m_roadPieces[0];
+            }
+            else if(i == m_trackLengthInpieces -1)
+            {
+                roadpieceToAdd = finish;
             }
 
             Instantiate(roadpieceToAdd, new Vector3(m_nextRoadPiecePoint.x, m_nextRoadPiecePoint.y, m_nextRoadPiecePoint.z), m_nextRoadPieceRotation);

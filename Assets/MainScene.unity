@@ -163,6 +163,7 @@ MonoBehaviour:
   e: {fileID: 120004, guid: ee4fcad496223d94996b13ef0c09096a, type: 2}
   f: {fileID: 120004, guid: 6f47006b79a4097488945833ac24ef69, type: 2}
   g: {fileID: 120004, guid: e707a570bb6bbc945a634a51d27b64cb, type: 2}
+  finish: {fileID: 120004, guid: d061da61895b0f14eb2a9b9f32a6496c, type: 2}
   m_roadPieces: []
   m_playerPrefab: {fileID: 196242, guid: 4925a0b20a91b8b4ba9e88f721ae7428, type: 2}
   m_trackLengthInpieces: 10
