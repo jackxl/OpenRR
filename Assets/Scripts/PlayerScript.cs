@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -9,26 +11,54 @@ public class PlayerScript : MonoBehaviour {
     public float jumpSpeed;
     public float jumpForce;
 
-	private Rigidbody rb;
+    public int maxAllowedJumps;
+    public int jumpcount;
+
+    public bool cannotExplode;
+
+    public GameManager gameManager;
+
+	public Rigidbody rb;
 
     private Vector3 bodyVelocity;
 
     private int updateCounter = 0;
 
+    public Text centerText;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
+
+        gameManager = (GameManager) GameObject.Find("GameManager").GetComponent("GameManager");
+        maxAllowedJumps = gameManager.m_trackLengthInpieces;
+
+        cannotExplode = false;
 	}
 	
     void Update()
     {
         updateCounter++;
 
+        //crashing
         if(rb.velocity.z < 0.5f && updateCounter > 60)
         {
             deleteBody();
         }
 
+        //too high
+        if(rb.transform.position.y > 20.0f)
+        {
+            deleteBody();
+        }
+
+        //offroad
+        if(rb.transform.position.x > 7 || rb.transform.position.x < -7)
+        {
+            deleteBody();
+        }
+
+        //too low
         if (rb.position.y < 1.21f)
         {
             rb.AddForce(new Vector3(0.0f, 5.0f, 0.0f));
@@ -61,7 +91,7 @@ public class PlayerScript : MonoBehaviour {
         }
 
         bodyVelocity = rb.velocity;
-        if(rb.velocity.z - bodyVelocity.z > 1.0f)
+        if((rb.velocity.z - bodyVelocity.z > 1.0f))
         {
             deleteBody();
         }
@@ -69,16 +99,29 @@ public class PlayerScript : MonoBehaviour {
 
     public void Jump()
     {
+        if(cannotExplode)
+        {
+            SceneManager.LoadScene(0);
+        }
+
         if(rb.transform.position.y < 1.25f)
         {
+            if (jumpcount >= maxAllowedJumps)
+            {
+                return;
+            }
             var v3 = new Vector3(0.0f, 20.0f * jumpForce, 0.0f);
 
             rb.AddForce(v3);
+            jumpcount++;
         }
     }
 
     public void deleteBody()
     {
-        Destroy(rb.gameObject);
+        if (!cannotExplode)
+        {
+            Destroy(rb.gameObject);
+        }
     }
 }

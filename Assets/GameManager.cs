@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,7 +26,10 @@ public class GameManager : MonoBehaviour
     private Vector3 m_nextRoadPiecePoint;
     private Quaternion m_nextRoadPieceRotation;
 
+    public Text centerText;
+
     int lastIndex;
+    float maxZ;
 
     private void initArray()
     {
@@ -81,6 +86,11 @@ public class GameManager : MonoBehaviour
             roadpieceToAdd.transform.Translate(m_nextRoadPiecePoint - entrypoint); //move the new piece in respect to the difference of its center and its entry point
 
             SaveExitPointTransform(roadpieceToAdd);
+
+            if (i == m_trackLengthInpieces -1)
+            {
+                maxZ = roadpieceToAdd.transform.Find("exitPoint").transform.position.z;
+            }
         }
 
     }
@@ -94,6 +104,33 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (null == GameObject.Find("Player(Clone)"))
+        {
+            SceneManager.LoadScene(0);
+        }
+
+
+        if (GameObject.Find("Player(Clone)").transform.position.z > (maxZ - 10.0f))
+        {
+
+            PlayerScript ps = (PlayerScript)GameObject.Find("Player(Clone)").GetComponent("PlayerScript");
+            if (GameObject.Find("Player(Clone)").transform.position.z > (maxZ - 5.0f))
+            {
+                centerText.text = "Press space to restart!";
+
+                ps.speed = 0;
+                ps.rb.velocity = Vector3.zero;
+                ps.rb.drag = 100.0f;
+            }
+            else
+            {
+                centerText.text = "FINISHED!";
+
+                ps.cannotExplode = true;
+                ps.rb.drag = 20.0f;
+            }
+        }
+
 
     }
 }
