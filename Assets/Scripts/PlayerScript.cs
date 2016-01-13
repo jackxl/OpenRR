@@ -28,6 +28,11 @@ public class PlayerScript : MonoBehaviour {
         {
             deleteBody();
         }
+
+        if (rb.position.y < 1.21f)
+        {
+            rb.AddForce(new Vector3(0.0f, 5.0f, 0.0f));
+        }
     }
 
 	// Update is called once per frame
@@ -44,7 +49,7 @@ public class PlayerScript : MonoBehaviour {
 
 		rb.AddForce (movement * speed);
 
-		rb.rotation = Quaternion.Euler (0.0f, 0.0f, rb.velocity.x * -tilt);
+		rb.rotation = Quaternion.Euler (0.0f, 0.0f, 0.0f);
 
         if(rb.position.y < -1)
         {
@@ -60,7 +65,7 @@ public class PlayerScript : MonoBehaviour {
 
     public void Jump()
     {
-        if(rb.transform.position.y < 2.5f)
+        if(rb.transform.position.y < 1.25f)
         {
             var v3 = new Vector3(0.0f, 20.0f * jumpForce, 0.0f);
 
