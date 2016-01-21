@@ -122,6 +122,7 @@ public class GameManager : MonoBehaviour
                 ps.speed = 0;
                 ps.rb.velocity = Vector3.zero;
                 ps.rb.drag = 100.0f;
+                ps.rb.isKinematic = true;
             }
             else
             {
