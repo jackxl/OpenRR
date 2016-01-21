@@ -70,18 +70,27 @@ public class PlayerScript : MonoBehaviour {
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 
-        if(Input.GetKeyDown(KeyCode.Space) || Input.touchCount > 0)
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
         }
 
-		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, 1);
+        var fingerCount = 0;
+            foreach (var touch in Input.touches)
+            {
+                if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled)
+                    fingerCount++;
+            }
+            if (fingerCount > 0)
+                Jump();
+
+        Vector3 movement = new Vector3 (moveHorizontal, 0.0f, 1);
 
 		rb.AddForce (movement * speed);
 
         // accellerometer input
 
-        rb.AddForce(new Vector3(Input.acceleration.x, 0.0f));
+        rb.AddForce(new Vector3(Input.acceleration.x * 2, 0.0f));
 
 		rb.rotation = Quaternion.Euler (0.0f, 0.0f, 0.0f);
 

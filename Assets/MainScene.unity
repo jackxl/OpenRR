@@ -412,7 +412,7 @@ MonoBehaviour:
   finish: {fileID: 120004, guid: d061da61895b0f14eb2a9b9f32a6496c, type: 2}
   m_roadPieces: []
   m_playerPrefab: {fileID: 196242, guid: 4925a0b20a91b8b4ba9e88f721ae7428, type: 2}
-  m_trackLengthInpieces: 3
+  m_trackLengthInpieces: 12
   centerText: {fileID: 205128595}
   belowCenterText: {fileID: 202519507}
 --- !u!4 &873175678
