@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     private Quaternion m_nextRoadPieceRotation;
 
     public Text centerText;
+    public Text belowCenterText;
 
     int lastIndex;
     float maxZ;
@@ -114,9 +115,9 @@ public class GameManager : MonoBehaviour
         {
 
             PlayerScript ps = (PlayerScript)GameObject.Find("Player(Clone)").GetComponent("PlayerScript");
-            if (GameObject.Find("Player(Clone)").transform.position.z > (maxZ - 5.0f))
+            if (GameObject.Find("Player(Clone)").transform.position.z > (maxZ - 8.0f))
             {
-                centerText.text = "Press space to restart!";
+                belowCenterText.text = "Press space to restart!";
 
                 ps.speed = 0;
                 ps.rb.velocity = Vector3.zero;
