@@ -90,7 +90,7 @@ public class PlayerScript : MonoBehaviour {
 
         // accellerometer input
 
-        rb.AddForce(new Vector3(Input.acceleration.x * 3, 0.0f));
+        rb.AddForce(new Vector3(Input.acceleration.x * 20, 0.0f));
 
 		rb.rotation = Quaternion.Euler (0.0f, 0.0f, 0.0f);
 
