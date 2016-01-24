@@ -26,6 +26,8 @@ public class PlayerScript : MonoBehaviour {
 
     public Text centerText;
 
+    GameObject fuelNeedle;
+
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
@@ -34,6 +36,8 @@ public class PlayerScript : MonoBehaviour {
         maxAllowedJumps = gameManager.m_trackLengthInpieces;
 
         cannotExplode = false;
+
+        fuelNeedle = (GameObject) GameObject.Find("needle");
 	}
 	
     void Update()
@@ -123,6 +127,14 @@ public class PlayerScript : MonoBehaviour {
 
             rb.AddForce(v3);
             jumpcount++;
+
+
+            //the fuel gage
+            int fuelLevel = (maxAllowedJumps - jumpcount) / maxAllowedJumps;
+            double startRot = 26;
+            float totalSwing = 124;
+
+            fuelNeedle.transform.Rotate(new Vector3(0, 0, totalSwing / maxAllowedJumps));
         }
     }
 
